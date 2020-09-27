@@ -7,6 +7,7 @@ Technologies used:
 
 Used Libraries:
 * `Junit-4.13.jar`
+* Visit the link and download jar file, add junit.jar file to your external libraries from project structure section. 
 
 Development Environment
 * `Ubuntu 20.04.1.LTS`
