@@ -1,16 +1,16 @@
-Shopping Cart project developed by kaanozbudak with pure Java technologies by using Intellij from Jetbrains.
+# **_Shopping Cart_**
 
 It is a simple e-commerce shopping cart project. You can create categories which belong to each other and add created products to those categories and create order with username, address and product items.
 
 Technologies used:
-* Java 1.8
+* `Java 1.8`
 
 Used Libraries:
-* Junit-4.13.jar
+* `Junit-4.13.jar`
 
 Development Environment
-* Ubuntu 20.04.1.LTS
-* Intellij Idea Ultimate Edition
+* `Ubuntu 20.04.1.LTS`
+* `Intellij Idea Ultimate Edition`
 
 
 **Project Structure**  <br /><br />
