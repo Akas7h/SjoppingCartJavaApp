@@ -40,7 +40,7 @@ public class Main {
         System.out.println("-----------------");
         System.out.println("-----------------");
 
-        // Create order builder and set 2 carrots
+        // Create order builder and set 10 carrots
         Order second_order = Order.newBuilder().address("Istanbul/Sariyer").username("user2").addToCart(carrot, 10)
                 .checkout();
 
