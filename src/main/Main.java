@@ -66,5 +66,11 @@ public class Main {
         System.out.println("Second Order Address: " + second_order.address);
         System.out.println("Second Order Cost + Delivery Cost: " + second_order.finalAmount);
         System.out.println("Any discount: " + second_order.is_discounted);
+
+        System.out.println("-----------------");
+        System.out.println("-----------------");
+        System.out.println("-----------------");
+        System.out.println("-----------------");
+        System.out.println("Created by kaanozbudak");
     }
 }
