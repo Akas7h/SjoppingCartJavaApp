@@ -2,6 +2,8 @@
 
 It is a simple e-commerce shopping cart project. You can create categories which belong to each other and add created products to those categories and create order with username, address and product items.
 
+Github Repository Link: https://github.com/kaanozbudak/shopping-cart
+
 Technologies used:
 * `Java 1.8`
 
