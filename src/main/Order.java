@@ -39,7 +39,7 @@ public class Order {
     }
 
 
-    static class Builder {
+    public static class Builder {
         private Map<Product, Integer> cart;
         private String username;
         private String address;
