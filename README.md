@@ -13,11 +13,11 @@ Development Environment
 * Intellij Idea Ultimate Edition
 
 
-**Project Structure**
+**Project Structure**  <br /><br />
 ![image](https://user-images.githubusercontent.com/26629591/94365812-7f17bf80-00dc-11eb-8e75-7367f7ce00aa.png)
 
-**Project Main Output**
+**Project Main Output** <br /><br />
 ![image](https://user-images.githubusercontent.com/26629591/94365746-fef15a00-00db-11eb-8147-78868a504182.png)
 
-**Project Test Output**
+**Project Test Output** <br /><br />
 ![image](https://user-images.githubusercontent.com/26629591/94365820-92c32600-00dc-11eb-8487-b3428f761b8a.png)
