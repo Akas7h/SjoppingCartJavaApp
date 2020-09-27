@@ -1,4 +1,4 @@
-Shopping Cart project developed with pure Java technologies by using Intellij from Jetbrains.
+Shopping Cart project developed by kaanozbudak with pure Java technologies by using Intellij from Jetbrains.
 
 It is a simple e-commerce shopping cart project. You can create categories which belong to each other and add created products to those categories and create order with username, address and product items.
 
