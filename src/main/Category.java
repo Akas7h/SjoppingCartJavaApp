@@ -1,3 +1,5 @@
+package main;
+
 public class Category {
     private String title;
     private Category parentCategory;

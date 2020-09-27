@@ -1,3 +1,5 @@
+package main;
+
 public class Campaign {
 
     private float discount;

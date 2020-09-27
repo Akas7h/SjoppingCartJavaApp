@@ -1,4 +1,4 @@
-import com.sun.org.apache.xpath.internal.operations.Or;
+package main;
 
 /**
  * @author kaanozbudak
@@ -7,32 +7,42 @@ import com.sun.org.apache.xpath.internal.operations.Or;
 
 
 public class Main {
-    // Main function for project run
-    public static void main(String[] args) {
-        // create 2 different campaign with their percentage
-        Campaign campaignPercentFive = new Campaign().setDiscount(5);
-        Campaign campaignPercentTen = new Campaign().setDiscount(10);
+    // main.Main function for project run
+    public static Campaign createCampaign(int discount){
+        return new Campaign().setDiscount(discount);
+    }
 
-        // Category food does not have any parent so set null
-        Category food = new Category().setTitle("food").setParentCategory(null);
+    public static Category createCategory(String title, Category parentCategory, Campaign campaign){
+        return new Category().setTitle(title).setParentCategory(parentCategory).setCampaign(campaign);
+    }
+
+    public static Product createProduct(String title, Category category, float price){
+        return new Product().setTitle(title).setCategory(category).setPrice(price);
+    }
+    public static void main(String[] args) {
+        Campaign campaignPercentFive = createCampaign(5);
+        Campaign campaignPercentTen = createCampaign(10);
+
+        // main.Category food does not have any parent or campaign so set null
+        Category food = createCategory("food", null, null);
 
         // Create 2 different category which belong to another
-        Category fruit = new Category().setTitle("fruit").setParentCategory(food).setCampaign(campaignPercentFive);
-        Category vegetable = new Category().setTitle("vegetable").setParentCategory(food).setCampaign(campaignPercentTen);
+        Category fruit = createCategory("fruit", food, campaignPercentFive);
+        Category vegetable = createCategory("vegetable", food, campaignPercentTen);
 
         // Create 1 fruit
-        Product apple = new Product().setTitle("apple").setPrice(100).setCategory(fruit);
+        Product apple = createProduct("apple", fruit, 100);
         System.out.println("Apple price: ");
         System.out.println(apple.getPrice());
         System.out.println("-----------------");
 
         // Create 1 vegetable
-        Product carrot = new Product().setTitle("carrot").setPrice(50).setCategory(vegetable);
+        Product carrot = createProduct("carrot", vegetable, 50);
         System.out.println("Carrot price: ");
         System.out.println(carrot.getPrice());
         System.out.println("-----------------");
 
-        // Create firset order builder and set 1 carrot and 1 apple
+        // Create first order builder and set 1 carrot and 1 apple
         Order first_order = Order.newBuilder().address("Istanbul/Sisli").username("user1").addToCart(carrot, 1)
                 .addToCart(apple, 1).checkout();
 
