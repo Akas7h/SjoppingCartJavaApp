@@ -1,6 +1,13 @@
 import com.sun.org.apache.xpath.internal.operations.Or;
 
+/**
+ * @author kaanozbudak
+ * createdDate -> 27.09.2020
+ */
+
+
 public class Main {
+    // Main function for project run
     public static void main(String[] args) {
         // create 2 different campaign with their percentage
         Campaign campaignPercentFive = new Campaign().setDiscount(5);
