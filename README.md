@@ -7,9 +7,13 @@ Technologies used:
 
 Used Libraries:
 * `Junit-4.13.jar`
-* Visit the link and download jar file, add junit.jar file to your external libraries from project structure section. 
+* `Hamcrast-all-1.3.jar`
+* Visit the link and download jar file, add junit.jar and hamcrast files to your external libraries from project structure section. 
+https://mvnrepository.com/artifact/org.hamcrest/hamcrest-all/1.3
+https://mvnrepository.com/artifact/junit/junit/4.13
 
 Development Environment
+
 * `Ubuntu 20.04.1.LTS`
 * `Intellij Idea Ultimate Edition`
 
