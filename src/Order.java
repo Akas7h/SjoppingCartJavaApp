@@ -12,15 +12,22 @@ public class Order {
     public String address;
     public String username;
     public float finalAmount;
+    public boolean is_discounted;
+
+    public boolean isIs_discounted() {
+        return is_discounted;
+    }
+
     public Map<Product, Integer> cart;
 
 
     // const
-    public Order(String address, String username, Map<Product, Integer> cart, float finalAmount) {
+    public Order(String address, String username, Map<Product, Integer> cart, float finalAmount, boolean is_discounted) {
         this.address = address;
         this.username = username;
         this.cart = cart;
         this.finalAmount = finalAmount;
+        this.is_discounted = is_discounted;
     }
 
 
@@ -39,6 +46,7 @@ public class Order {
         float deliveryCost = 0;
         float finalAmount = 0;
         int total_quantity = 0;
+        boolean is_discounted = false;
 
         // set Cart as hashmap because we need product type and quantity
         public Builder() {
@@ -74,15 +82,17 @@ public class Order {
                 total_quantity += _quantity;
                 // count how many product in the cart
             });
+
             deliveryCost = total_quantity * deliveryCostPerProduct;
             // if total price more than minimum coupon price set discount
             if (amount <  minimumDiscountOrderPrice) {
                 finalAmount = amount + deliveryCost;
             }
             else {
+                is_discounted = true;
                 finalAmount = amount + deliveryCost - discountAmount ;
             }
-            return new Order(address, username, cart, finalAmount);
+            return new Order(address, username, cart, finalAmount, is_discounted);
         }
     }
 

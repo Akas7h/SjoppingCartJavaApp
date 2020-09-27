@@ -13,44 +13,41 @@ public class Main {
         Category fruit = new Category().setTitle("fruit").setParentCategory(food).setCampaign(campaignPercentFive);
         Category vegetable = new Category().setTitle("vegetable").setParentCategory(food).setCampaign(campaignPercentTen);
 
-        // Create 2 fruit
+        // Create 1 fruit
         Product apple = new Product().setTitle("apple").setPrice(100).setCategory(fruit);
         System.out.println("Apple price: ");
         System.out.println(apple.getPrice());
         System.out.println("-----------------");
 
-        Product banana = new Product().setTitle("banana").setPrice(100).setCategory(fruit);
-        System.out.println("Banana price: ");
-        System.out.println(banana.getPrice());
-        System.out.println("-----------------");
-
-        // Create 2 vegetable
+        // Create 1 vegetable
         Product carrot = new Product().setTitle("carrot").setPrice(50).setCategory(vegetable);
-        System.out.println("-----------------");
         System.out.println("Carrot price: ");
         System.out.println(carrot.getPrice());
         System.out.println("-----------------");
+
+        // Create firset order builder and set 1 carrot and 1 apple
+        Order first_order = Order.newBuilder().address("Istanbul/Sisli").username("user1").addToCart(carrot, 1)
+                .addToCart(apple, 1).checkout();
+
+        // First Order details
+        System.out.println("First Order Owner: " + first_order.username);
+        System.out.println("First Order Address: " + first_order.address);
+        System.out.println("First Order Cost + Delivery Cost: " + first_order.finalAmount);
+        System.out.println("Any discount: " + first_order.is_discounted);
+
+        System.out.println("-----------------");
+        System.out.println("-----------------");
+        System.out.println("-----------------");
+        System.out.println("-----------------");
+
         // Create order builder and set 2 carrots
-        Order.Builder orderBuilder = Order.newBuilder().addToCart(carrot, 2);
+        Order second_order = Order.newBuilder().address("Istanbul/Sariyer").username("user2").addToCart(carrot, 10)
+                .checkout();
 
-        // Checkout so calculate final amount
-        Order order1 = orderBuilder.address("Istanbul/Sisli").username("kaanozbudak").checkout();
-        System.out.println("There are 2 Carrots and delivery cost: ");
-        System.out.println(order1.finalAmount);
-        System.out.println("-----------------");
-        // Add 2 more bananas, 3 more apples
-        orderBuilder.addToCart(banana, 2).addToCart(apple, 3);
-
-        // Checkout one more and calculate final amount
-        Order order2 = orderBuilder.checkout();
-        System.out.println("There are 2 Carrots, 2 bananas, 3 apples and delivery cost: ");
-        System.out.println(order2.finalAmount);
-        System.out.println("-----------------");
-
-        // Order details
-
-        System.out.println("Order Owner: " + order2.username);
-        System.out.println("Order Address: " + order2.address);
-        System.out.println("Order Cost + Delivery Cost: " + order2.finalAmount);
+        // Second Order details
+        System.out.println("Second Order Owner: " + second_order.username);
+        System.out.println("Second Order Address: " + second_order.address);
+        System.out.println("Second Order Cost + Delivery Cost: " + second_order.finalAmount);
+        System.out.println("Any discount: " + second_order.is_discounted);
     }
 }
