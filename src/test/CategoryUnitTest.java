@@ -7,6 +7,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CategoryUnitTest {
+    /*
+    Create category and test asserts
+     */
     @Test
     public void testAddCategory() {
         Category category = new Category().setTitle("testCategory").setParentCategory(null).setCampaign(null);

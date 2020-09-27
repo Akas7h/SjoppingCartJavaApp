@@ -5,6 +5,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class ProductUnitTest {
+    /*
+    Create product, product and test asserts
+     */
     @Test
     public void testAddProduct(){
         Category testCategory = new Category().setTitle("testCategoryTitle").setParentCategory(null).setCampaign(null);

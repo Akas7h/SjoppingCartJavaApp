@@ -5,6 +5,9 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 public class CampaignUnitTest {
+    /*
+    Create campaign and test asserts
+     */
     @Test
     public void testAddCampaign(){
         Campaign campaign = new Campaign().setDiscount(15);
